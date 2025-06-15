@@ -7,14 +7,19 @@ BUFSIZE = 64  # Must match server-side buffer size
 
 
 def recv_all(sock, total_bytes):
+    # Initialize an empty bytes object to accumulate received data
     data = b''
+    # Keep receiving data until have the expected numnber of bytes
     while len(data) < total_bytes:
+        # Receive the smaller of BUFSIZE or remaining bytes needed
         chunk = sock.recv(min(BUFSIZE, total_bytes - len(data)))
+        # If recv returns empty, the connection was closed unexpectedly
         if not chunk:
             break
+        # Append the received chunk to the total data
         data += chunk
+    # Return the accumulated data
     return data
-
 def main():
     user_input = input("Input lowercase sentence: ")
     print(f"{user_input}  # This is a user input. {user_input[:2]} is the number of characters in the following sentence. (n = 2)")
