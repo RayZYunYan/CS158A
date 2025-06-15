@@ -30,7 +30,7 @@ while True:
         connectionSocket.close()
         continue
     msg_len = int(len_bytes.decode())
-    print(f"The message length is :{msg_len}")
+    print(f"The message length is:{msg_len}")
 
     # Read the body of the message of fixed length
     sentence =  recv_all(connectionSocket, msg_len).decode()
