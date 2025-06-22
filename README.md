@@ -7,3 +7,9 @@ This repository contains programming assignments for the CS158A Computer Network
 A TCP-based client-server application where the client sends a variable-length message with a 2-byte length prefix, and the server responds with the same message in uppercase.
 
 > See [`a1/README.md`](a1/README.md) for usage instructions and example output.
+
+## 📁 Assignment 2: Chat Server with Multiple Clients
+
+A multithreaded TCP chat server that allows multiple clients to join, exchange messages, and exit independently. The server relays messages from each client to all others, using the format `<client_port>: <message>`.
+
+> See [`a2/README.md`](a2/README.md) for detailed instructions and sample terminal outputs.

@@ -6,6 +6,7 @@ serverPort = 12345
 serverSocket = socket(AF_INET, SOCK_STREAM) # TCP socket
 serverSocket.bind(('',serverPort))
 serverSocket.listen()
+serverSocket.settimeout(1)
 
 hostName = gethostname()
 localIP = gethostbyname(hostName)
@@ -63,6 +64,8 @@ while True:
         connectionSocket, clientAddress = serverSocket.accept()
         print(f"New connection from {clientAddress}")
         threading.Thread(target=handleClient, args=(connectionSocket, clientAddress)).start()
+    except timeout:
+        continue
     except KeyboardInterrupt:
         print("Server shutting down.")
         break
