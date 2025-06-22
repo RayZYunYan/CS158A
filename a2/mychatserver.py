@@ -46,6 +46,7 @@ def handleClient(connectionSocket: socket, clientAddress):
 
             # Format and broadcast the message
             formatted = f"{clientPort}: {message}".encode()
+            print(formatted.decode())
             sendToAll(formatted, connectionSocket)
     except:
         pass
