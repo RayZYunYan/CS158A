@@ -13,3 +13,9 @@ A TCP-based client-server application where the client sends a variable-length m
 A multithreaded TCP chat server that allows multiple clients to join, exchange messages, and exit independently. The server relays messages from each client to all others, using the format `<client_port>: <message>`.
 
 > See [`a2/README.md`](a2/README.md) for detailed instructions and sample terminal outputs.
+
+## 📁 Assignment 3: Ring-Based Leader Election
+
+An asynchronous leader election protocol using sockets and threading in a ring topology. Each node (process) generates a unique UUID and communicates with its neighbors over TCP to determine the leader.
+
+> See [`a3/README.md`](a3/README.md) for configuration, run instructions, and election log output.
