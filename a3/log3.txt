@@ -1,0 +1,8 @@
+Received: uuid=66f0c91c-fc7b-4f46-8057-7678d4a1694b, flag=0,less, 0
+Ignored
+Sent: uuid=c8ed23fe-12e6-4995-89b8-10b75b73d319, flag=0
+Received: uuid=c8ed23fe-12e6-4995-89b8-10b75b73d319, flag=0,same, 0
+Leader is decided to c8ed23fe-12e6-4995-89b8-10b75b73d319
+Sent: uuid=c8ed23fe-12e6-4995-89b8-10b75b73d319, flag=1
+Received: uuid=c8ed23fe-12e6-4995-89b8-10b75b73d319, flag=1,same, 1 (Leader=c8ed23fe-12e6-4995-89b8-10b75b73d319)
+Leader is decided to c8ed23fe-12e6-4995-89b8-10b75b73d319

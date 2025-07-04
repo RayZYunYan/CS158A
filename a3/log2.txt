@@ -1,0 +1,8 @@
+Received: uuid=502b5c86-22b9-4aec-9e5c-1005ab08cd81, flag=0,less, 0
+Ignored
+Sent: uuid=66f0c91c-fc7b-4f46-8057-7678d4a1694b, flag=0
+Received: uuid=c8ed23fe-12e6-4995-89b8-10b75b73d319, flag=0,greater, 0
+Sent: uuid=c8ed23fe-12e6-4995-89b8-10b75b73d319, flag=0
+Received: uuid=c8ed23fe-12e6-4995-89b8-10b75b73d319, flag=1,greater, 0
+Sent: uuid=c8ed23fe-12e6-4995-89b8-10b75b73d319, flag=1
+Leader is decided to c8ed23fe-12e6-4995-89b8-10b75b73d319
