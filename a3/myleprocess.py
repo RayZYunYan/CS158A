@@ -77,6 +77,9 @@ class ElectionNode:
         while self.state == 0:
             time.sleep(1)
 
+        write_log("Election complete. Exiting.")
+        sys.exit(0)
+
     def server_thread(self):
         server_sock = socket(AF_INET, SOCK_STREAM)
         server_sock.bind(self.server_address)
@@ -84,15 +87,14 @@ class ElectionNode:
         conn, addr = server_sock.accept()
         self.in_conn = conn
 
-        while True:
+        # Use makefile to read lines from the connection
+        f = conn.makefile()  
+        for line in f:
             try:
-                data = conn.recv(1024)
-                if not data:
-                    break
-                msg = Message.from_json(data.decode())
+                msg = Message.from_json(line.strip())  # clean the '\n'
                 self.handle_message(msg)
             except Exception as e:
-                write_log(f"[ERROR] Server receive error: {e}")
+                write_log(f"[ERROR] Message handling error: {e}")
                 break
 
     def send_message(self, msg):
@@ -100,7 +102,7 @@ class ElectionNode:
             write_log("[ERROR] Outgoing connection not established.")
             return
         try:
-            self.out_conn.send(msg.to_json().encode())
+            self.out_conn.send((msg.to_json() + "\n").encode())
             write_log(f"Sent: uuid={msg.uuid}, flag={msg.flag}")
         except Exception as e:
             write_log(f"[ERROR] Send failed: {e}")
