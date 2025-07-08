@@ -1,8 +1,9 @@
-Received: uuid=502b5c86-22b9-4aec-9e5c-1005ab08cd81, flag=0,less, 0
+Received: uuid=0278901b-a27e-40b1-9bca-683e5191574c, flag=0,less, 0
 Ignored
-Sent: uuid=66f0c91c-fc7b-4f46-8057-7678d4a1694b, flag=0
-Received: uuid=c8ed23fe-12e6-4995-89b8-10b75b73d319, flag=0,greater, 0
-Sent: uuid=c8ed23fe-12e6-4995-89b8-10b75b73d319, flag=0
-Received: uuid=c8ed23fe-12e6-4995-89b8-10b75b73d319, flag=1,greater, 0
-Sent: uuid=c8ed23fe-12e6-4995-89b8-10b75b73d319, flag=1
-Leader is decided to c8ed23fe-12e6-4995-89b8-10b75b73d319
+Sent: uuid=0ecc451f-55da-48d5-a784-40e0a16de533, flag=0
+Received: uuid=8c4991e5-b3f6-48fe-b467-2895793901a7, flag=0,greater, 0
+Sent: uuid=8c4991e5-b3f6-48fe-b467-2895793901a7, flag=0
+Received: uuid=8c4991e5-b3f6-48fe-b467-2895793901a7, flag=1,greater, 0
+Sent: uuid=8c4991e5-b3f6-48fe-b467-2895793901a7, flag=1
+Leader is decided to 8c4991e5-b3f6-48fe-b467-2895793901a7
+Election complete. Exiting.

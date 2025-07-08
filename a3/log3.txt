@@ -1,8 +1,9 @@
-Received: uuid=66f0c91c-fc7b-4f46-8057-7678d4a1694b, flag=0,less, 0
+Received: uuid=0ecc451f-55da-48d5-a784-40e0a16de533, flag=0,less, 0
 Ignored
-Sent: uuid=c8ed23fe-12e6-4995-89b8-10b75b73d319, flag=0
-Received: uuid=c8ed23fe-12e6-4995-89b8-10b75b73d319, flag=0,same, 0
-Leader is decided to c8ed23fe-12e6-4995-89b8-10b75b73d319
-Sent: uuid=c8ed23fe-12e6-4995-89b8-10b75b73d319, flag=1
-Received: uuid=c8ed23fe-12e6-4995-89b8-10b75b73d319, flag=1,same, 1 (Leader=c8ed23fe-12e6-4995-89b8-10b75b73d319)
-Leader is decided to c8ed23fe-12e6-4995-89b8-10b75b73d319
+Sent: uuid=8c4991e5-b3f6-48fe-b467-2895793901a7, flag=0
+Received: uuid=8c4991e5-b3f6-48fe-b467-2895793901a7, flag=0,same, 0
+Leader is decided to 8c4991e5-b3f6-48fe-b467-2895793901a7
+Sent: uuid=8c4991e5-b3f6-48fe-b467-2895793901a7, flag=1
+Received: uuid=8c4991e5-b3f6-48fe-b467-2895793901a7, flag=1,same, 1 (Leader=8c4991e5-b3f6-48fe-b467-2895793901a7)
+Leader is decided to 8c4991e5-b3f6-48fe-b467-2895793901a7
+Election complete. Exiting.
