@@ -74,9 +74,10 @@ Received: uuid=9d5e..., flag=1, same, 1 (Leader=9d5e...)
 
 ## 📌 Notes
 
-- Only one config.txt is submitted, but the three logs were generated using three different configs.
-- This program uses only basic socket + threading, no third-party libraries.
-- Designed to match the style of CS158A lecture slides.
+- Only `config.txt` is submitted, but all logs were generated using 3 rotating configurations.
+- Program uses only `socket`, `threading`, `uuid`, and `json` (no external dependencies).
+- Output format follows course conventions as discussed in class.
+- Final implementation has been tested and produces consistent leader election results.
 
 ---
 
