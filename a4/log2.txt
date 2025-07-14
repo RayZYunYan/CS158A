@@ -1,0 +1,12 @@
+Server listening at ('127.0.0.1', 5002)
+Accepted connection from ('127.0.0.1', 63335)
+Received: uuid=bf8f3ae8-7ec5-40d4-892e-c122fe7e7e56, flag=0,less, 0
+Ignored
+Outgoing connection established.
+Sent: uuid=c404f0e9-ddb7-442e-acf3-7f86d37f6d27, flag=0
+Received: uuid=c404f0e9-ddb7-442e-acf3-7f86d37f6d27, flag=0,same, 0
+Leader is decided to c404f0e9-ddb7-442e-acf3-7f86d37f6d27
+Sent: uuid=c404f0e9-ddb7-442e-acf3-7f86d37f6d27, flag=1
+Received: uuid=c404f0e9-ddb7-442e-acf3-7f86d37f6d27, flag=1,same, 1 (Leader=c404f0e9-ddb7-442e-acf3-7f86d37f6d27)
+Leader is decided to c404f0e9-ddb7-442e-acf3-7f86d37f6d27
+Election complete. Exiting.

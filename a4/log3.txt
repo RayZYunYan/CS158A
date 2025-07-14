@@ -1,0 +1,11 @@
+Server listening at ('127.0.0.1', 5003)
+Accepted connection from ('127.0.0.1', 63341)
+Received: uuid=c404f0e9-ddb7-442e-acf3-7f86d37f6d27, flag=0,greater, 0
+[WAIT] Waiting for outgoing connection to be ready...
+Outgoing connection established.
+Sent: uuid=48d8844d-9043-4652-a8c9-65ab0bf22bc7, flag=0
+Sent: uuid=c404f0e9-ddb7-442e-acf3-7f86d37f6d27, flag=0
+Received: uuid=c404f0e9-ddb7-442e-acf3-7f86d37f6d27, flag=1,greater, 0
+Sent: uuid=c404f0e9-ddb7-442e-acf3-7f86d37f6d27, flag=1
+Leader is decided to c404f0e9-ddb7-442e-acf3-7f86d37f6d27
+Election complete. Exiting.

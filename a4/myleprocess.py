@@ -5,34 +5,27 @@ import json
 import time
 import sys
 
-# Configuration
 CONFIG_FILE = "config.txt"
 LOG_FILE = None
 
-# Message class
 class Message:
     def __init__(self, uuid_val, flag):
         self.uuid = uuid_val
-        self.flag = flag  # 0 for still electing, 1 for leader elected
+        self.flag = flag
 
     def to_json(self):
-        return json.dumps({
-            "uuid": str(self.uuid),
-            "flag": self.flag
-        })
+        return json.dumps({"uuid": str(self.uuid), "flag": self.flag})
 
     @staticmethod
     def from_json(s):
         data = json.loads(s)
         return Message(uuid.UUID(data["uuid"]), data["flag"])
 
-# Log function
 def write_log(line):
     with open(LOG_FILE, "a") as f:
         f.write(line + "\n")
     print(line)
 
-# Load config.txt and parse server/client addresses
 def load_config():
     with open(CONFIG_FILE, "r") as f:
         lines = f.read().splitlines()
@@ -40,7 +33,6 @@ def load_config():
         client_ip, client_port = lines[1].split(",")
         return (server_ip.strip(), int(server_port.strip())), (client_ip.strip(), int(client_port.strip()))
 
-# Main class per election node
 class ElectionNode:
     def __init__(self, log_file):
         global LOG_FILE
@@ -56,8 +48,7 @@ class ElectionNode:
         t = threading.Thread(target=self.server_thread)
         t.start()
 
-        time.sleep(1.5)  # Ensure server starts before client connects
-
+        time.sleep(1.5)
         self.out_conn = socket(AF_INET, SOCK_STREAM)
         connected = False
         while not connected:
@@ -66,13 +57,14 @@ class ElectionNode:
                 connected = True
             except:
                 time.sleep(1)
+        write_log("Outgoing connection established.")
 
-        # Send initial UUID message
         init_msg = Message(self.my_id, 0)
         self.send_message(init_msg)
 
         while self.state == 0:
             time.sleep(1)
+        print(f"Leader is decided to {self.leader_id}")
         write_log("Election complete. Exiting.")
 
     def server_thread(self):
@@ -99,9 +91,13 @@ class ElectionNode:
         server_sock.close()
 
     def send_message(self, msg):
-        if self.out_conn is None:
-            write_log("[ERROR] Outgoing connection not established.")
-            return
+        retry = 0
+        while self.out_conn is None:
+            if retry == 0:
+                write_log("[WAIT] Waiting for outgoing connection to be ready...")
+            retry += 1
+            time.sleep(0.5)
+
         try:
             self.out_conn.send((msg.to_json() + "\n").encode())
             write_log(f"Sent: uuid={msg.uuid}, flag={msg.flag}")
@@ -116,7 +112,6 @@ class ElectionNode:
         else:
             cmp_result = "less"
 
-        # Log message receipt with current state
         if self.state == 1:
             write_log(f"Received: uuid={msg.uuid}, flag={msg.flag},{cmp_result}, 1 (Leader={self.leader_id})")
         else:
@@ -139,8 +134,6 @@ class ElectionNode:
                 self.send_message(msg)
             write_log(f"Leader is decided to {self.leader_id}")
 
-
-# Entry point
 if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("Usage: python myleprocess.py <log_filename>")
