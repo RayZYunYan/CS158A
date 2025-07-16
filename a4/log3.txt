@@ -1,11 +1,12 @@
 Server listening at ('127.0.0.1', 5003)
-Accepted connection from ('127.0.0.1', 63341)
-Received: uuid=c404f0e9-ddb7-442e-acf3-7f86d37f6d27, flag=0,greater, 0
-[WAIT] Waiting for outgoing connection to be ready...
+Accepted connection from ('127.0.0.1', 49702)
+Received: uuid=c3e33fe2-42a3-4796-b3d3-5022fbeff915, flag=0,less, 0
+Ignored
 Outgoing connection established.
-Sent: uuid=48d8844d-9043-4652-a8c9-65ab0bf22bc7, flag=0
-Sent: uuid=c404f0e9-ddb7-442e-acf3-7f86d37f6d27, flag=0
-Received: uuid=c404f0e9-ddb7-442e-acf3-7f86d37f6d27, flag=1,greater, 0
-Sent: uuid=c404f0e9-ddb7-442e-acf3-7f86d37f6d27, flag=1
-Leader is decided to c404f0e9-ddb7-442e-acf3-7f86d37f6d27
+Sent: uuid=c98d116a-1c2a-4135-b596-3266e3a13a18, flag=0
+Received: uuid=c98d116a-1c2a-4135-b596-3266e3a13a18, flag=0,same, 0
+Leader is decided to c98d116a-1c2a-4135-b596-3266e3a13a18
+Sent: uuid=c98d116a-1c2a-4135-b596-3266e3a13a18, flag=1
+Received: uuid=c98d116a-1c2a-4135-b596-3266e3a13a18, flag=1,same, 1 (Leader=c98d116a-1c2a-4135-b596-3266e3a13a18)
+Received: uuid=c98d116a-1c2a-4135-b596-3266e3a13a18, flag=1,same, 1 (Leader=c98d116a-1c2a-4135-b596-3266e3a13a18)
 Election complete. Exiting.
