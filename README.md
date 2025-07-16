@@ -19,3 +19,9 @@ A multithreaded TCP chat server that allows multiple clients to join, exchange m
 An asynchronous leader election protocol using sockets and threading in a ring topology. Each node (process) generates a unique UUID and communicates with its neighbors over TCP to determine the leader.
 
 > See [`a3/README.md`](a3/README.md) for configuration, run instructions, and election log output.
+
+## 📁 Assignment 4: Final Leader Election (Refined Version)
+
+An improved and fully stabilized implementation of the asynchronous ring-based leader election algorithm. This version removes unnecessary locks, improves connection robustness, ensures proper message forwarding without loss, and reduces redundant log outputs. It is suitable for both local multi-process testing and asynchronous startup conditions.
+
+> See [`a4/README.md`](a4/README.md) for configuration files, run instructions, example terminal outputs, and a detailed description of improvements compared to Assignment 3.
