@@ -83,6 +83,7 @@ Election complete. Exiting.
 ---
 
 ## ✍️ Author
-Ray Zhang
+
+Ray Zhang  
 San Jose State University  
 CS158A Summer 2025
