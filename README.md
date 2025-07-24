@@ -25,3 +25,9 @@ An asynchronous leader election protocol using sockets and threading in a ring t
 An improved and fully stabilized implementation of the asynchronous ring-based leader election algorithm. This version removes unnecessary locks, improves connection robustness, ensures proper message forwarding without loss, and reduces redundant log outputs. It is suitable for both local multi-process testing and asynchronous startup conditions.
 
 > See [`a4/README.md`](a4/README.md) for configuration files, run instructions, example terminal outputs, and a detailed description of improvements compared to Assignment 3.
+
+## 📁 Assignment 5: Secure HTTP Client
+
+A Python script that establishes a secure TLS connection to `www.google.com` using the `socket` and `ssl` modules. It sends a manually constructed HTTP GET request for the root path `/`, receives the full response, and saves the HTML body content to a local file. 
+
+> See [`a5/README.md`](a5/README.md) for run instructions, example output, and socket + SSL usage notes.
